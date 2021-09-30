@@ -5,7 +5,7 @@ interface ButtonProps {
 }
 
 function SubmitButton({ content }: ButtonProps) {
-  return <Button>{content}</Button>;
+  return <Button type="submit">{content}</Button>;
 }
 
 export default SubmitButton;

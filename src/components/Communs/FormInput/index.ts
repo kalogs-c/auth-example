@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Input = styled.input`
+const FormInput = styled.input`
   padding: 1rem;
   background-color: ${({ theme }) => theme.colors.secondaryBlack};
   border: none;
@@ -13,3 +13,5 @@ export const Input = styled.input`
     color: #808080;
   }
 `;
+
+export default FormInput;
