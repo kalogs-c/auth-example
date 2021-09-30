@@ -20,6 +20,7 @@ export const TitlesContainer = styled.div`
 
 export const Title = styled.h1`
   color: #fff;
+  text-align: center;
 `;
 
 export const Subtitle = styled.span`

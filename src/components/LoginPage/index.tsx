@@ -1,4 +1,4 @@
-import { Container, TitlesContainer, Title, Subtitle } from "./styles";
+import { Container, TitlesContainer, Title, Subtitle } from "@components/Communs/TitlesAndContainers";
 import LoginForm from "./LoginForm";
 
 export default function LoginPage() {

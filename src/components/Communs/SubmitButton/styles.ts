@@ -10,6 +10,7 @@ export const Button = styled.button`
   border: none;
   border-radius: 7px;
   width: 100%;
+  max-width: 400px;
   color: #ffffff;
   font-weight: 600;
   cursor: pointer;

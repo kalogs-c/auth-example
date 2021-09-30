@@ -1,4 +1,9 @@
-import { Container, TitlesContainer, Title, Subtitle } from "./styles";
+import {
+  Container,
+  TitlesContainer,
+  Title,
+  Subtitle,
+} from "@components/Communs/TitlesAndContainers";
 import SignupForm from "./SignupForm";
 
 export default function SignupPage() {
