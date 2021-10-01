@@ -1,5 +1,6 @@
 import connectToDb from "../../utils/mongodb";
 import { NextApiRequest, NextApiResponse } from "next";
+import { hash } from "bcrypt";
 
 interface ResponseType {
   message: string;
@@ -25,10 +26,10 @@ export default async (
 
   const userExists = await db
     .collection("users")
-    .findOne({ login: req.body.login });
+    .findOne({ username: username });
 
   if (userExists) {
-    res.status(400).json({ message: "Usuario com esse login já existe" });
+    res.status(400).json({ message: "Username already exists" });
     return;
   }
 
@@ -36,10 +37,10 @@ export default async (
     name: name,
     lastName: lastName,
     username: username,
-    password: password,
+    password: await hash(password, 10),
   });
 
-  if (dbResponse) console.log("feito");
+  if (dbResponse) console.log("User created successfully");
 
-  res.status(200);
+  res.status(200).json({ message: "User created successfully" });
 };

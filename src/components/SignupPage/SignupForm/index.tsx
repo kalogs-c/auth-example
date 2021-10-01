@@ -1,11 +1,11 @@
-import Link from "next/link";
+import { useRef } from "react";
 
+import Link from "next/link";
 import FormInput from "@components/Communs/FormInput";
 import Form from "@components/Communs/Form";
 import SubmitButton from "@components/Communs/SubmitButton";
 
 import { DontHaveAcount, NameWrapper } from "./styles";
-import { useRef } from "react";
 
 function SignupForm() {
   const nameRef = useRef(null);
@@ -35,11 +35,10 @@ function SignupForm() {
         "Content-Type": "application/json",
       },
       body: JSON.stringify(data),
-    }).then(({ status }) =>
-      status === 200
-        ? "Users has been created with sucess"
-        : "Failed to create an user"
-    );
+    }).then(async (res) => {
+      const { message } = await res.json();
+      console.log(message);
+    });
   };
 
   return (

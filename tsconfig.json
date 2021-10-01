@@ -19,6 +19,6 @@
       "@mongodb/*": ["./utils/*"],
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "utils/mongodb.js"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "utils/mongodb.ts"],
   "exclude": ["node_modules"]
 }
